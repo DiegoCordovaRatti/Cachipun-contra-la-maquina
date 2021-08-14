@@ -1,8 +1,7 @@
 alert("Piedra, Papel o Tijeras")
-//crea un ciclo infinito para seguir jugando despues de cada ronda de juego
-while (true) {
-    //veces que se repetirá el juego antes de comenzar una nueva ronda
-    let juegos = +prompt("Indica cuantas veces te gustaría jugar")
+
+    //veces que se repetirá el juego
+    let juegos = prompt("Indica cuantas veces te gustaría jugar")
 
     //variables de victoria, derrota y empate, que se irán modificando despues de cada juego y se reiniciarán despues de cada ronda
     let win = 0;
@@ -31,31 +30,31 @@ while (true) {
         }
 
         //compara ambas jugadas e indica el resultado final
-        if (jugada == "Tijera" && jugada_computer == "Tijera") {
+        if (jugada == "Tijera" || jugada == "tijera" || jugada == "Tijeras" || jugada == "tijeras" && jugada_computer == "Tijera") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, es un EMPATE ¡Intentalo otra vez!`)
             draw += 1;
-        } else if (jugada == "Piedra" && jugada_computer == "Piedra") {
+        } else if (jugada == "Piedra" || jugada == "piedra" && jugada_computer == "Piedra") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, es un EMPATE ¡Intentalo otra vez!`)
             draw += 1;
-        } else if (jugada == "Papel" && jugada_computer == "Papel") {
+        } else if (jugada == "Papel" || jugada == "papel" && jugada_computer == "Papel") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, es un EMPATE ¡Intentalo otra vez!`)
             draw += 1;
-        } else if (jugada == "Piedra" && jugada_computer == "Tijera") {
+        } else if (jugada == "Piedra" || jugada == "piedra" && jugada_computer == "Tijera") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, GANASTE ¡Juega otra vez!`)
             win += 1;
-        } else if (jugada == "Papel" && jugada_computer == "Piedra") {
+        } else if (jugada == "Papel" || jugada == "papel" && jugada_computer == "Piedra") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, GANASTE ¡Juega otra vez!`)
             win += 1;
-        } else if (jugada == "Tijera" && jugada_computer == "Papel") {
+        } else if (jugada == "Tijera" || jugada == "tijera" || jugada == "Tijeras" || jugada == "tijeras" && jugada_computer == "Papel") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, GANASTE ¡Juega otra vez!`)
             win += 1;
-        } else if (jugada == "Piedra" && jugada_computer == "Papel") {
+        } else if (jugada == "Piedra" || jugada == "piedra" && jugada_computer == "Papel") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, PERDISTE ¡Intentalo otra vez!`)
             lose += 1;
-        } else if (jugada == "Papel" && jugada_computer == "Tijera") {
+        } else if (jugada == "Papel" || jugada == "papel" && jugada_computer == "Tijera") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, PERDISTE ¡Intentalo otra vez!`)
             lose += 1;
-        } else if (jugada == "Tijera" && jugada_computer == "Piedra") {
+        } else if (jugada == "Tijera" || jugada == "tijera" || jugada == "Tijeras" || jugada == "tijeras" && jugada_computer == "Piedra") {
             alert(`Tu jugaste ${jugada} y la computadora jugó ${jugada_computer}. Por ende, PERDISTE ¡Intentalo otra vez!`)
             lose += 1;
         }
@@ -72,7 +71,3 @@ while (true) {
     } else if (win == lose) {
         alert("Esta ronda fue un empate...")
     }
-
-    //mensaje previo antes de empezar un nuevo ciclo
-    alert("¡Juguemos de nuevo!")
-}
